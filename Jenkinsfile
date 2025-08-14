@@ -1,5 +1,3 @@
-Jenkinsfile (Windows-compatible)
-
 pipeline {
     agent any
 
