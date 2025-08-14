@@ -10,15 +10,15 @@ pipeline {
     stages {
         stage('Clone GitHub Repo') {
             steps {
-                git branch: 'main', credentialsId: 'github-https', url: 'https://github.com/hemanthraj-2005/Pipelining_pythonApp.git'
+                git branch: 'main', credentialsId: 'github-https', url: 'https://github.com/hemanthraj-2005/pipelining-python-app.git'
             }
         }
 
         stage('Set Up Python Virtual Environment') {
             steps {
-                bat '"C:\\Users\\your-username\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m venv venv'
+                bat '"C:\\Users\\heman\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" -m venv venv'
                 bat '.\\venv\\Scripts\\python.exe -m pip install --upgrade pip'
-                bat '.\\venv\\Scripts\\pip install -r requirements.txt'
+                bat '.\\venv\\Scripts\\pip install pandas numpy tensorflow flask'
             }
         }
 
